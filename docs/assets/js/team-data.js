@@ -1,0 +1,9 @@
+// Replace these placeholders with approved staff biographies and photographs.
+window.TEAM = [
+  { name: "Course Lead", role: "Academic leadership", photo: "", bio: "Provides overall academic direction and ensures that the three modules form one coherent learning journey.", expertise: "Programme design, assessment and student development", support: "Office hours to be confirmed" },
+  { name: "SDT Module Leader", role: "Module instructor", photo: "", bio: "Leads Semantic Data Technologies, including RDF, OWL, SPARQL, knowledge graphs and data-quality methods.", expertise: "Semantic Web, ontologies and knowledge graphs", support: "Weekly tutorial and project clinic" },
+  { name: "Advanced ML Module Leader", role: "Module instructor", photo: "", bio: "Leads the transition from classical machine learning to advanced modelling, evaluation and responsible deployment.", expertise: "Machine learning, model evaluation and explainability", support: "Weekly tutorial and coding clinic" },
+  { name: "Deep Learning Module Leader", role: "Module instructor", photo: "", bio: "Leads neural-network foundations, convolutional models, attention, transformers and modern deep-learning applications.", expertise: "Neural networks, computer vision and representation learning", support: "Weekly tutorial and coding clinic" },
+  { name: "Practical Instructor", role: "Laboratory teaching", photo: "", bio: "Supports hands-on activities in WebProtégé, Google Colab, Python and knowledge-graph tooling.", expertise: "Technical demonstrations and troubleshooting", support: "Scheduled practical sessions" },
+  { name: "Academic Tutor", role: "Student support", photo: "", bio: "Facilitates small-group tutorials, formative feedback, project planning and individual learning support.", expertise: "Tutorial facilitation and assessment guidance", support: "Supervised-support sessions" }
+];

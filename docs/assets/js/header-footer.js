@@ -1,0 +1,36 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const depth = document.body.dataset.depth === 'module' ? '../' : '';
+  const page = document.body.dataset.page || '';
+  const navLink = (href, label, key) => `<a href="${depth}${href}" ${page === key ? 'aria-current="page"' : ''}>${label}</a>`;
+  const header = document.querySelector('[data-site-header]');
+  const footer = document.querySelector('[data-site-footer]');
+  if (header) header.innerHTML = `
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="${depth}index.html" aria-label="ARU and China Jiliang University learning portal home">
+          <span class="brand-mark">A×C</span>
+          <span class="brand-copy"><strong>ARU × CJLU</strong><span>AI & Semantic Data · 2026</span></span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+          ${navLink('index.html', 'Home', 'home')}
+          ${navLink('students.html', 'Students', 'students')}
+          ${navLink('team.html', 'Teaching team', 'team')}
+          ${navLink('modules/semantic-data-technologies.html', 'SDT', 'sdt')}
+          ${navLink('modules/advanced-machine-learning.html', 'Advanced ML', 'aml')}
+          ${navLink('modules/deep-learning.html', 'Deep learning', 'dl')}
+        </nav>
+      </div>
+    </header>`;
+  if (footer) footer.innerHTML = `
+    <footer class="site-footer">
+      <div class="content">
+        <div class="footer-grid">
+          <div><h2>ARU × China Jiliang University</h2><p>A shared learning space for semantic data, advanced machine learning and deep learning.</p></div>
+          <div><h3>Explore</h3><p><a href="${depth}students.html">Student cohort</a><br><a href="${depth}team.html">Teaching team</a></p></div>
+          <div><h3>Modules</h3><p><a href="${depth}modules/semantic-data-technologies.html">SDT</a><br><a href="${depth}modules/advanced-machine-learning.html">Advanced ML</a><br><a href="${depth}modules/deep-learning.html">Deep learning</a></p></div>
+        </div>
+        <p class="footer-note"><small>Prototype prepared for the 2026 teaching cohort. Student information must be published only with informed consent. © <span data-current-year></span> ARU × CJLU.</small></p>
+      </div>
+    </footer>`;
+});
