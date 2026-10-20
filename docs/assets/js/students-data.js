@@ -1,6 +1,5 @@
 window.STUDENTS = [
   {
-    id: "w261802113",              
     name: "PinZhen You",
     photo: "",                     
     hometown: "Hangzhou, Zhejiang, China",
