@@ -3,22 +3,22 @@ window.MODULES = {
     title: "Semantic Data Technologies",
     code: "SDT",
     strapline: "Make data meaningful, connected and machine-understandable.",
-    summary: "This module introduces the ideas and tools used to describe meaning explicitly, connect information across systems and construct trustworthy knowledge graphs.",
-    tools: "WebProtégé, Protégé Desktop, RDFLib, SPARQL, SHACL and Google Colab",
-    outcomes: ["Model real-world domains as ontologies", "Represent linked information using RDF and RDFS", "Create and query knowledge graphs with SPARQL", "Use OWL reasoning and SHACL validation appropriately", "Evaluate provenance, quality and responsible use"],
-    weeks: [
-      ["1", "From the Internet to the Semantic Web", "Internet, Web, HTML, XML and the motivation for machine-readable meaning", "History + concept map"],
-      ["2", "XML and Structured Data", "Elements, attributes, namespaces, XML Schema and the limits of syntax alone", "XML lab"],
-      ["3", "RDF: Data as Triples", "Subjects, predicates, objects, IRIs, literals and graph visualisation", "CSV-to-RDF"],
-      ["4", "RDFS and Shared Vocabularies", "Classes, subclasses, properties, domains, ranges and lightweight inference", "Schema design"],
-      ["5", "Ontology Engineering", "Competency questions, scope, reuse, top-down and bottom-up development", "Domain workshop"],
-      ["6", "OWL and Description Logic", "Restrictions, equivalence, disjointness and the open-world assumption", "Reasoning lab"],
-      ["7", "Protégé and WebProtégé", "Collaborative ontology creation, individuals, annotations and reasoners", "WebProtégé build"],
-      ["8", "SPARQL Querying", "SELECT, FILTER, OPTIONAL, aggregation, paths and federated queries", "Query challenge"],
-      ["9", "Linked Data and Knowledge Graphs", "Publishing, linking, identity, schema alignment and graph applications", "Graph integration"],
-      ["10", "SHACL and Data Quality", "Shapes, constraints, reports and the distinction between validation and reasoning", "Quality dashboard"],
-      ["11", "Knowledge-Graph Construction", "Extraction, mapping, entity resolution, provenance and maintenance", "Pipeline lab"],
-      ["12", "Neurosymbolic AI and Course Synthesis", "Knowledge graphs with machine learning, LLMs, agents and logical guardrails", "Project showcase"]
+    summary: "A twelve-day course on semantic data, ontologies, RDF, Protégé, a movie dataset, NLP, SPARQL queries, importing data and deploying a Fuseki endpoint. The course concludes with student presentations.",
+    tools: "Protégé, RDF, the movie dataset, SPARQL and Apache Jena Fuseki",
+    outcomes: ["Explain semantic data, RDF and ontology fundamentals", "Explore and model a movie dataset using Protégé", "Import ontologies and individual data", "Write SPARQL queries and work with a Fuseki endpoint", "Communicate results in a final presentation"],
+    days: [
+      [1, "Semantic Data"],
+      [2, "Ontologies"],
+      [3, "Protégé Demos"],
+      [4, "RDF"],
+      [5, "Movie Dataset"],
+      [6, "NLP"],
+      [7, "SPARQL Part I"],
+      [8, "SPARQL Part II"],
+      [9, "SPARQL III"],
+      [10, "Importing Data (ontologies and individuals)"],
+      [11, "Fuseki / SPARQL endpoint"],
+      [12, "Presentations Schedule"]
     ]
   },
   aml: {
@@ -79,6 +79,30 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('[data-module-summary]').textContent = module.summary;
   document.querySelector('[data-module-tools]').textContent = module.tools;
   document.querySelector('[data-module-outcomes]').innerHTML = module.outcomes.map(item => `<li>${item}</li>`).join('');
-  document.querySelector('[data-module-weeks]').innerHTML = module.weeks.map(week => `
-    <tr><td>${week[0]}</td><td><strong>${week[1]}</strong><br>${week[2]}</td><td><span class="tag">${week[3]}</span></td></tr>`).join('');
+  // The SDT module has a 12-day programme; AML and DL retain their weekly outlines.
+  if (Array.isArray(module.days)) {
+    const topicIndex = document.querySelector('[data-module-topics]');
+    const dayList = document.querySelector('[data-module-days]');
+    if (topicIndex) {
+      topicIndex.innerHTML = module.days.map(([day, topic]) => `
+        <a class="sdt-topic-link" href="#day-${day}">
+          <span class="sdt-topic-day">Day ${String(day).padStart(2, '0')}</span>
+          <span class="sdt-topic-name">${topic}</span>
+          <span class="sdt-topic-arrow" aria-hidden="true">↗</span>
+        </a>`).join('');
+    }
+    if (dayList) {
+      dayList.innerHTML = module.days.map(([day, topic]) => `
+        <li class="sdt-day-item" id="day-${day}">
+          <span class="sdt-day-number">${String(day).padStart(2, '0')}</span>
+          <div><span class="sdt-day-label">Day ${day}</span><h3>${topic}</h3></div>
+        </li>`).join('');
+    }
+  } else {
+    const weeklyTable = document.querySelector('[data-module-weeks]');
+    if (weeklyTable) {
+      weeklyTable.innerHTML = module.weeks.map(week => `
+        <tr><td>${week[0]}</td><td><strong>${week[1]}</strong><br>${week[2]}</td><td><span class="tag">${week[3]}</span></td></tr>`).join('');
+    }
+  }
 });
