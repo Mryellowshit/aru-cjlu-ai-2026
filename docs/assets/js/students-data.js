@@ -1,7 +1,7 @@
 window.STUDENTS = [
   {
     name: "PinZhen You",
-    photo: "",                     
+    photo: "assets/images/students/orian-pin-zhen-you-square.jpg",
     hometown: "Hangzhou, Zhejiang, China",
     studies: "Computer Science and Technology, China Jiliang University",
     interests: "Deep learning and Machine Learning",

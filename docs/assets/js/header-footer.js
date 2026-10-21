@@ -7,9 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) header.innerHTML = `
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="${depth}index.html" aria-label="ARU and China Jiliang University learning portal home">
-          <span class="brand-mark">A×C</span>
-          <span class="brand-copy"><strong>ARU × CJLU</strong><span>AI & Semantic Data · 2026</span></span>
+      
+        <a class="brand" href="${depth}index.html"
+         aria-label="ARU and China Jiliang University home">
+        <img
+        src="${depth}assets/images/icons/aru-cjlu-logo2.png"
+        alt="ARU and CJLU"
+        class="brand-logo">
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
@@ -30,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div><h3>Explore</h3><p><a href="${depth}students.html">Student cohort</a><br><a href="${depth}team.html">Teaching team</a></p></div>
           <div><h3>Modules</h3><p><a href="${depth}modules/semantic-data-technologies.html">SDT</a><br><a href="${depth}modules/advanced-machine-learning.html">Advanced ML</a><br><a href="${depth}modules/deep-learning.html">Deep learning</a></p></div>
         </div>
-        <p class="footer-note"><small>Prototype prepared for the 2026 teaching cohort. Student information must be published only with informed consent. © <span data-current-year></span> ARU × CJLU.</small></p>
+        <p class="footer-note"><small>Prototype prepared for the 2026 teaching cohort. Student and tutor information is published only with consent. © <span data-current-year></span> ARU × CJLU.</small></p>
       </div>
     </footer>`;
 });
