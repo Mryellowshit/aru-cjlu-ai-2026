@@ -12,7 +12,7 @@ window.STUDENTS = [
     const number = String(index + 2).padStart(2, '0');
     return {
       id: `student-10`,
-      name: `XuRui S`,
+      name: `XuRui Shen`,
       photo: "",
       hometown: "Hangzhou, Zhejiang, China",
       studies: "Computing or related discipline — details to be confirmed",
