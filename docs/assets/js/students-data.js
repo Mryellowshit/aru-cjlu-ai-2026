@@ -17,8 +17,17 @@ window.STUDENTS = [
     shortBio: "As a member of the 2026 ARU–CJLU cohort, I focus on artificial intelligence and software engineering. I am interested in building practical AI solutions, exploring modern machine learning frameworks, and bridging the gap between theoretical algorithms and real-world applications.",
     approved: true
   },
-  ...Array.from({ length: 23 }, (_, index) => {
-    const number = String(index + 3).padStart(2, '0');
+  {
+    name: "Kangcheng Xu",
+    photo: "",
+    hometown: "Lianyungang, Jiangsu, China",
+    studies: "Computer Science and Technology, China Jiliang University",
+    interests: "Deep Learning, Machine Learning, Machine Vision, and Algorithm Engineering",
+    shortBio: "I enjoy turning algorithms into tools that solve real problems. As a member of the 2026 ARU–CJLU cohort, I work on industrial vision and measurement using C++, Qt, and OpenCV, and explore the path from YOLO training to ONNX deployment. My interests span deep learning, machine learning, and reliable AI systems. What keeps me curious is the gap between a model that works in a demo and one that works on a factory floor.",
+    approved: true
+  },
+  ...Array.from({ length: 22 }, (_, index) => {
+    const number = String(index + 4).padStart(2, '0');
     return {
       id: `student-${number}`,
       name: `Student ${number}`,
