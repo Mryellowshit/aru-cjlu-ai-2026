@@ -9,7 +9,6 @@ window.STUDENTS = [
     approved: true
   },
   {
-    id: "student-10",
     name: "XuRui Shen",
     photo: "",
     hometown: "Hangzhou, Zhejiang, China",
