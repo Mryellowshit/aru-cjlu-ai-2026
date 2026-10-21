@@ -26,6 +26,15 @@ window.STUDENTS = [
     shortBio: "I enjoy turning algorithms into tools that solve real problems. As a member of the 2026 ARU–CJLU cohort, I work on industrial vision and measurement using C++, Qt, and OpenCV, and explore the path from YOLO training to ONNX deployment. My interests span deep learning, machine learning, and reliable AI systems. What keeps me curious is the gap between a model that works in a demo and one that works on a factory floor.",
     approved: true
   },
+  {
+    name: "Sihan Li",
+    photo: "assets/images/students/pinzhen-you.jpg",                     
+    hometown: "Hangzhou, Zhejiang, China",
+    studies: "Physics, University of Toronto",
+    interests: "Intelligent Control",
+    shortBio: "I'm Sihan Li, a physics graduate from the University of Toronto with an interest in artificial intelligence, autonomous systems, and control theory. I'm particularly interested in how intelligent systems can learn and adapt to changing environments, with applications in autonomous driving and robotics.",
+    approved: true
+  },
   ...Array.from({ length: 22 }, (_, index) => {
     const number = String(index + 4).padStart(2, '0');
     return {
