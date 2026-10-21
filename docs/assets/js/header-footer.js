@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="header-inner">
       
         <a class="brand" href="${depth}index.html"
-   aria-label="ARU and China Jiliang University home">
-  <img
-    src="${depth}images/students/aru-cjlu-logo.png"
-    alt="ARU and CJLU"
-    class="brand-logo">
-</a>
+         aria-label="ARU and China Jiliang University home">
+        <img
+        src="${depth}images/students/aru-cjlu-logo.png"
+        alt="ARU and CJLU"
+        class="brand-logo">
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
           ${navLink('index.html', 'Home', 'home')}
