@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a class="brand" href="${depth}index.html"
          aria-label="ARU and China Jiliang University home">
         <img
-        src="${depth}images/students/aru-cjlu-logo2.png"
+        src="${depth}assets/images/students/aru-cjlu-logo2.png"
         alt="ARU and CJLU"
         class="brand-logo">
         </a>
