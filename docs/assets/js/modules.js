@@ -7,18 +7,18 @@ window.MODULES = {
     tools: "Protégé, RDF, the movie dataset, SPARQL and Apache Jena Fuseki",
     outcomes: ["Explain semantic data, RDF and ontology fundamentals", "Explore and model a movie dataset using Protégé", "Import ontologies and individual data", "Write SPARQL queries and work with a Fuseki endpoint", "Communicate results in a final presentation"],
     days: [
-      [1, "Semantic Data"],
-      [2, "Ontologies"],
-      [3, "Protégé Demos"],
-      [4, "RDF"],
-      [5, "Movie Dataset"],
-      [6, "NLP"],
-      [7, "SPARQL Part I"],
-      [8, "SPARQL Part II"],
-      [9, "SPARQL III"],
-      [10, "Importing Data (ontologies and individuals)"],
-      [11, "Fuseki / SPARQL endpoint"],
-      [12, "Presentations Schedule"]
+      [1, "Semantic Data", "Introduction to semantic data and connected, machine-readable information", "Concept map and discussion"],
+      [2, "Ontologies", "Ontology classes, properties, individuals and modelling choices", "Sketch a simple ontology"],
+      [3, "Protégé Demos", "Using Protégé to inspect and build ontologies", "Guided Protégé demonstration"],
+      [4, "RDF", "RDF triples, IRIs, literals and graph representation", "Create and inspect RDF triples"],
+      [5, "Movie Dataset", "Entities and relationships in a movie knowledge graph", "Explore the movie dataset"],
+      [6, "NLP", "Extracting entities and relationships from natural-language text", "Text-to-graph exercise"],
+      [7, "SPARQL Part I", "SELECT, WHERE and basic graph patterns", "Introductory SPARQL queries"],
+      [8, "SPARQL Part II", "FILTER, OPTIONAL, ORDER BY and aggregation", "Intermediate SPARQL practice"],
+      [9, "SPARQL III", "Advanced query patterns and multi-step graph queries", "Advanced SPARQL exercises"],
+      [10, "Importing Data (ontologies and individuals)", "Importing ontologies and individual records into a knowledge graph", "Ontology and individuals import"],
+      [11, "Fuseki / SPARQL endpoint", "Publishing and querying RDF datasets with Apache Jena Fuseki", "Fuseki endpoint practical"],
+      [12, "Presentations Schedule", "Presenting project work and discussing results", "Student presentations"]
     ]
   },
   aml: {
@@ -92,11 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>`).join('');
     }
     if (dayList) {
-      dayList.innerHTML = module.days.map(([day, topic]) => `
-        <li class="sdt-day-item" id="day-${day}">
-          <span class="sdt-day-number">${String(day).padStart(2, '0')}</span>
-          <div><span class="sdt-day-label">Day ${day}</span><h3>${topic}</h3></div>
-        </li>`).join('');
+      dayList.innerHTML = module.days.map(([day, topic, scope, activity]) => `
+        <tr id="day-${day}">
+          <td>${day}</td>
+          <td><strong>${topic}</strong><br>${scope}</td>
+          <td><span class="tag">${activity}</span></td>
+        </tr>`).join('');
     }
   } else {
     const weeklyTable = document.querySelector('[data-module-weeks]');
