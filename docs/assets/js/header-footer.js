@@ -7,10 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) header.innerHTML = `
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="${depth}index.html" aria-label="ARU and China Jiliang University learning portal home">
-          <span class="brand-mark">A×C</span>
-          <span class="brand-copy"><strong>ARU × CJLU</strong><span>AI & Semantic Data · 2026</span></span>
-        </a>
+      
+        <a class="brand" href="${depth}index.html"
+   aria-label="ARU and China Jiliang University home">
+  <img
+    src="${depth}images/students/aru-cjlu-logo.png"
+    alt="ARU and CJLU"
+    class="brand-logo">
+</a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
           ${navLink('index.html', 'Home', 'home')}
