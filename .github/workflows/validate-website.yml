@@ -1,0 +1,34 @@
+name: Website checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  site-checks:
+    name: Website checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          find docs/assets/js -type f -name '*.js' -print0 | xargs -0 -r -n 1 node --check
+
+      - name: Verify HTML links and local assets
+        run: python3 scripts/validate_site.py
