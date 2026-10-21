@@ -5,5 +5,5 @@ window.TEAM = [
   { name: "Yuanyuan Qi", role: "Tutor", photo: "assets/images/team/yuanyuan-qi.jpg", bio: "Supports the Advanced Machine Learning module, working with students on machine learning methods and natural language processing.", expertise: "Machine Learning and Natural Language Processing", support: "Supervised-support sessions" },
   { name: "Zijun Meng", role: "Tutor", photo: "assets/images/team/zijun-meng.jpg", bio: "Supports Semantic Data Technologies, drawing on a background in deep learning, signals and systems.", expertise: "Deep Learning, Signals and Systems", support: "Supervised-support sessions" },
   { name: "Linhui Wu", role: "Tutor", photo: "assets/images/team/linhui-wu.jpg", bio: "Supports Semantic Data Technologies, with a focus on pattern recognition and computer vision.", expertise: "Pattern Recognition and Computer Vision", support: "Supervised-support sessions" },
-  { name: "Becca", role: "Coordinator", photo: "", bio: "Leads the transition from classical machine learning to advanced modelling, evaluation and responsible deployment.", expertise: "Machine learning, model evaluation and explainability", support: "Weekly tutorial and coding clinic" },
+  { name: "Becca", role: "Coordinator", photo: "", bio: "", expertise: "Machine learning, model evaluation and explainability", support: "Helps with all admin things" },
  ];
