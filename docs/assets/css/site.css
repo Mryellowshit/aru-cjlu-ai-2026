@@ -238,11 +238,10 @@ img { max-width: 100%; }
   min-height: 72px;
 }
 
-/* Optimised teaching-team photographs */
-
+/* Teaching-team headshots: square frames preserve faces in portrait and square photos. */
 .team-card .portrait {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   height: auto;
   overflow: hidden;
   border-radius: 12px;
@@ -255,10 +254,10 @@ img { max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 23%;
 }
 
-/* Remove decorative circle over the photo */
+/* Keep photos unobstructed by the decorative circle. */
 .team-card .portrait::after {
   display: none;
 }
