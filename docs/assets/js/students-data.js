@@ -19,7 +19,7 @@ window.STUDENTS = [
   },
   {
     name: "Kangcheng Xu",
-    photo: "",
+    photo: "assets/images/students/kangcheng-xu.jpg",
     hometown: "Lianyungang, Jiangsu, China",
     studies: "Computer Science and Technology, China Jiliang University",
     interests: "Deep Learning, Machine Learning, Machine Vision, and Algorithm Engineering",
