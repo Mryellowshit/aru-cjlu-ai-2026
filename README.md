@@ -1,7 +1,5 @@
 # ARU × China Jiliang University — AI & Semantic Data
 
-A responsive, accessible static website inspired by the information architecture of the CIS 6270 course site. It contains:
-
 - a programme landing page;
 - one searchable page for 25 student profiles;
 - one page for course teachers, instructors and tutors;
