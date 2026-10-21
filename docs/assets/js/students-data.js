@@ -28,7 +28,7 @@ window.STUDENTS = [
   },
   {
     name: "Sihan Li",
-    photo: "assets/images/students/pinzhen-you.jpg",                     
+    photo: "assets/images/students/Sihan Li.jpg",                     
     hometown: "Hangzhou, Zhejiang, China",
     studies: "Physics, University of Toronto",
     interests: "Intelligent Control",
