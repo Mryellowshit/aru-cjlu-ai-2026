@@ -20,7 +20,7 @@ window.STUDENTS = [
     hometown: "Linyi, Shandong, China",
     studies: "Artificial Intelligence, Anglia Ruskin University & China Jiliang University",
     interests: "Radiomics, Medical Foundation Models, Medical Image Segmentation, Neuroscience",
-    shortBio: "I am new to this field and deeply curious about AI applications in medical imaging, especially for neuroscience-related imaging studies. As part of the 2026 ARU–CJLU cohort, I am currently learning radiomics, medical segmentation and ontology tools. I hope to explore how visual models and structured domain knowledge can be combined for medical use cases. I am particularly interested in whether such AI approaches can be smoothly integrated into routine clinical workflows.",
+    shortBio: "I completed my undergraduate degree in Medical Imaging at Guangzhou University of Chinese Medicine. New to this research field, I am deeply curious about AI for medical imaging, particularly neuroscience-related imaging studies. As part of the 2026 ARU–CJLU cohort, I am currently learning radiomics, medical segmentation and ontology tools. I aim to explore how visual models and structured domain knowledge can work together in medical settings, and whether these approaches can be smoothly integrated into routine clinical workflows.",
     approved: true
   },
   {
