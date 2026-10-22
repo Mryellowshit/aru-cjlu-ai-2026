@@ -16,12 +16,12 @@ window.STUDENTS = [
     name: "Zichen Ma",
     group: "Einstein",
     leader: true,
-    photo: "",
-    hometown: "To be confirmed",
-    studies: "To be confirmed",
-    interests: "To be confirmed",
-    shortBio: "This profile is reserved for a member of the 2026 ARU–CJLU cohort and will be completed after the student reviews and approves the wording.",
-    approved: false
+    photo: "assets/images/students/zichen-ma.jpg",                     
+    hometown: "Linyi, Shandong, China",
+    studies: "Artificial Intelligence, Anglia Ruskin University & China Jiliang University",
+    interests: "Radiomics, Medical Foundation Models, Medical Image Segmentation, Neuroscience",
+    shortBio: "I am new to this field and deeply curious about AI applications in medical imaging, especially for neuroscience-related imaging studies. As part of the 2026 ARU–CJLU cohort, I am currently learning radiomics, medical segmentation and ontology tools. I hope to explore how visual models and structured domain knowledge can be combined for medical use cases. I am particularly interested in whether such AI approaches can be smoothly integrated into routine clinical workflows.",
+    approved: true
   },
   {
     id: "student-03",
