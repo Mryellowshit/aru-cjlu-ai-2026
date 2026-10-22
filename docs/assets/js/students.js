@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const render = (query = '') => {
     const q = query.trim().toLowerCase();
     const filtered = window.STUDENTS.filter(student =>
-      [student.name, student.hometown, student.studies, student.interests, student.shortBio]
+      [student.name, student.group, student.hometown, student.studies, student.interests, student.shortBio]
         .join(' ').toLowerCase().includes(q)
     );
     count.textContent = `${filtered.length} profile${filtered.length === 1 ? '' : 's'}`;
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="profile-copy">
           <span class="profile-role">${student.approved ? 'Student profile' : 'Awaiting approval'}</span>
           <h2>${student.name}</h2>
+          ${student.group ? `<span class="profile-group${student.leader ? ' is-leader' : ''}">Team ${student.group}${student.leader ? '<span class="profile-group-lead">Leader</span>' : ''}</span>` : ''}
           <p><strong>From:</strong> ${student.hometown}</p>
           <p><strong>Studies:</strong> ${student.studies}</p>
           <p><strong>Future interests:</strong> ${student.interests}</p>
