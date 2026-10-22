@@ -41,4 +41,4 @@ All weekly outlines are stored in `docs/assets/js/modules.js`.
 
 ## Branding
 
-The prototype uses an ARU-inspired navy, red, muted-gold and warm off-white palette, but does not bundle protected institutional logos. Insert approved ARU and CJLU brand assets only in accordance with both institutions' brand guidance.
+The prototype uses an ARU-inspired navy, red, muted-gold and warm off-white palette, but does not bundle protected institutional logos. 
