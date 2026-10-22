@@ -143,6 +143,36 @@ img { max-width: 100%; }
 .profile-copy h2, .profile-copy h3 { margin: 5px 0 8px; color: var(--navy); font-size: 1.25rem; line-height: 1.15; }
 .profile-copy p { margin: 7px 0; color: var(--muted); font-size: .9rem; }
 .profile-copy strong { color: var(--ink); }
+/* Student group label: a quiet left-bar label under the name. Deliberately
+   plain so it does not compete with the red role label above it; the group
+   leader swaps the bar to red and gains a small LEADER badge. */
+.profile-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding-left: 9px;
+  border-left: 3px solid var(--gold);
+  color: var(--muted);
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.4;
+}
+.profile-group.is-leader {
+  border-left-color: var(--red);
+  color: var(--navy);
+}
+.profile-group-lead {
+  padding: 1px 6px 2px;
+  border-radius: 4px;
+  background: var(--red);
+  color: #fff;
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
 .profile-card.placeholder { background: #fcfbf7; }
 
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
